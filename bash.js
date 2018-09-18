@@ -27,7 +27,7 @@ process.stdin.on('data', (data) => {
     let urlStr = data.toString().trim().split(' ')[1]
     process.stdout.write(urlStr)
     // process.stdout.write('url', urlStr)
-    curl(urlStr)
+    curl(urlStr, done)
   } 
   else {process.stdout.write('You typed: ' + cmd)}
   process.stdout.write('\nprompt > ')
