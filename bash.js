@@ -22,7 +22,7 @@ process.stdin.on('data', (data) => {
     ls(done)
   } else if (cmd.includes('cat')) {
     let fileName = data.toString().trim().split(' ')[1]
-    cat(fileName)
+    cat(fileName, done)
   } else if (cmd.includes('curl')) {
     let urlStr = data.toString().trim().split(' ')[1]
     process.stdout.write(urlStr)
