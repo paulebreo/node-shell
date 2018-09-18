@@ -5,7 +5,12 @@ function catInfo (fileName) {
   const fullFilePath = process.cwd() + '/' + fileName;
 
   fs.readFile(fullFilePath, (err, data) => {
-    process.stdout.write(`${data}`)
+    if(err) {
+      throw err
+    } else {
+      process.stdout.write(data)
+    }
+    
   });
 
   // process.stdout.write(stream);
