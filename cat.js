@@ -1,10 +1,16 @@
-
+const fs = require('fs');
 
 function catInfo (fileName) {
+
   const fullFilePath = process.cwd() + '/' + fileName;
-  process.stdout.write(fullFilePath);
-  // fileContents =
-  // process.stdout.write(`${process.cwd}${fileContents}`)
+
+  fs.readFile(fullFilePath, (err, data) => {
+    process.stdout.write(`${data}`)
+  });
+
+  // process.stdout.write(stream);
+
+
 }
 
 module.exports = catInfo

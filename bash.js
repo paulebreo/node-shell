@@ -9,7 +9,7 @@ process.stdin.on('data', (data) => {
   // const writeThis = process.stdout.write;
   if (cmd === 'pwd') {
     pwd()
-  } else if(cmd === 'ls') {
+  } else if (cmd === 'ls') {
     ls()
   } else if (cmd.includes('cat')) {
     let fileName = data.toString().trim().split(' ')[1]
